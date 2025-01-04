@@ -32,25 +32,7 @@ export default function Footer() {
     <footer style={styles.siteFooter}>
       <div style={styles.footerContainer}>
         <p style={styles.footerText}>
-          © 2024 |{" "}
-          <a
-            href=""
-            style={styles.link}
-            onMouseEnter={(e) => (e.currentTarget.style.color = styles.linkHover.color)}
-            onMouseLeave={(e) => (e.currentTarget.style.color = styles.link.color)}
-          >
-            Designed
-          </a>{" "}
-          and{" "}
-          <a
-            href=""
-            style={styles.link}
-            onMouseEnter={(e) => (e.currentTarget.style.color = styles.linkHover.color)}
-            onMouseLeave={(e) => (e.currentTarget.style.color = styles.link.color)}
-          >
-            coded
-          </a>{" "}
-          by Priyanshu Patel
+          © 2024  Designed and coded by Priyanshu Patel
         </p>
       </div>
     </footer>
