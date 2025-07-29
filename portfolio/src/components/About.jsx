@@ -45,31 +45,28 @@ const About = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 mt-3">
-            intro About Me
+            About Me
           </h2>
-          <p className="text-base sm:text-lg leading-relaxed">
+          <p className="text-base sm:text-2xl leading-relaxed mt-4 text-light">
             <span className="block md:hidden">
-              Motivated CS student with a passion for intuitive web development.
-              Skilled in React.js, Tailwind CSS, and responsive design.
-              Experienced in healthcare and e-commerce platforms, ensuring
-              seamless user experiences.
+              Passionate full stack developer focused on building high-quality,
+              responsive web platforms with clean UIs and reliable APIs.
+              Experienced in building healthcare and e-commerce solutions that
+              deliver performance and user trust.
             </span>
             <span className="hidden md:block">
-              I’m Priyanshu Patel, an aspiring software developer currently
-              pursuing B.Tech in Computer Science at VIT Bhopal. I’m passionate
-              about building scalable web and mobile applications that blend
-              clean design with solid engineering. My interests lie at the
-              intersection of full-stack development, system design, and
-              intelligent automation. I enjoy turning ideas into
-              products—whether it’s developing wellness platforms, building
-              AI-powered agents, or optimizing backend APIs. I’ve gained
-              hands-on experience through internships and personal projects,
-              using technologies like React, Node.js, Express, PostgreSQL, and
-              Python. I’m also deeply curious about browser automation, API
-              design, and problem-solving through code. When I’m not coding, I
-              enjoy participating in hackathons, writing clean reusable
-              components, or exploring open-source tools. Let’s connect and
-              build something impactful!
+              I’m Priyanshu Patel, a software developer pursuing B.Tech in
+              Computer Science at VIT Bhopal. I specialize in building
+              end-to-end web applications with modern frontend frameworks,
+              robust backend architectures, and secure APIs. My experience
+              includes developing production-ready platforms in healthcare and
+              e-commerce, where performance, security, and user experience are
+              key. I work extensively with technologies like React, Node.js,
+              Express, PostgreSQL, and TypeScript to deliver maintainable and
+              scalable solutions. I’m a strong believer in writing clean,
+              modular code, contributing to team projects, and continuously
+              learning to improve my craft. Let's collaborate and bring your
+              ideas to life!
             </span>
           </p>
         </motion.div>

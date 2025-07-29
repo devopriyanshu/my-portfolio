@@ -104,7 +104,7 @@ const Projects = () => {
             <h3 className="text-xl font-semibold text-light mb-2">
               {project.title}
             </h3>
-            <p className="text-sm text-gray-400 mb-4">{project.description}</p>
+            <p className="text-lg text-gray-400 mb-4">{project.description}</p>
             {project.modalKey ? (
               <button
                 onClick={() => handleProjectClick(project.modalKey)}
