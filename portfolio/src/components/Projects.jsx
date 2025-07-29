@@ -4,6 +4,10 @@ import ecommerceImg from "../assets/images/e-commerce.jpg";
 import musicPlayerImg from "../assets/images/music-player.webp";
 import chatbotImg from "../assets/images/chatbot.jpg";
 import ProjectModal from "./ProjectModal";
+import wellnestImg from "../assets/images/wellnest.png";
+import pricetrackerImg from "../assets/images/pricetrackerImg.png";
+import cozyImg from "../assets/images/cozy.png";
+import proxyImg from "../assets/images/proxy.png";
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,35 +23,59 @@ const Projects = () => {
       title: "Full Stack Wellness App",
       description:
         "Production-grade wellness platform enabling expert consultations, health center discovery, and user health logging.",
-      image: chatbotImg,
+      image: wellnestImg,
       modalKey: "wellnessApp",
+      tech: ["Next.js", "TypeScript", "PostgreSQL", "Node.js", "OAuth"],
+    },
+
+    {
+      title: "Real-Time Weather App",
+      description:
+        "Weather application with location-based updates, 5-day forecasts, and efficient state management via React Query.",
+      image: cozyImg,
+      modalKey: "weatherApp",
+      tech: ["React.js", "React Query", "Tailwind", "Weather API"],
+    },
+    {
+      title: "Amazon Price Tracker",
+      description:
+        "Price tracking app that monitors Amazon product links and sends email alerts on price drops. Built with Next.js, TypeScript, Bright Data for scraping, and NodeMailer for notifications.",
+      image: pricetrackerImg,
+      modalKey: "priceTrackerApp",
+      tech: ["Next.js", "TypeScript", "NodeMailer", "Bright Data"],
     },
     {
       title: "AI Powered Browser Assistant",
       description:
         "Python-based AI agent that automates browser tasks using natural language commands using Playwright and OpenAI GPT.",
-      image: ecommerceImg,
-      modalKey: "aiBrowserAssistant",
-    },
-    {
-      title: "Real-Time Weather App",
-      description:
-        "Weather application with location-based updates, 5-day forecasts, and efficient state management via React Query.",
-      image: musicPlayerImg,
-      modalKey: "weatherApp",
+      image: chatbotImg,
+      link: "https://github.com/devopriyanshu/HackOnSunday/tree/main/sunday1_ai_browser_agent",
+      tech: ["Python", "Playwright", "OpenAI API"],
     },
     {
       title: "Multithreaded Proxy Server",
       description:
         "High-performance proxy server built with C++ supporting multithreading and concurrent client handling. Implements request forwarding, caching, and logging for HTTP traffic analysis.",
-      image: chatbotImg,
+      image: proxyImg,
       modalKey: "proxyServer",
+      tech: ["C++", "Multithreading", "Socket Programming"],
     },
   ];
 
   const modalData = {
+    priceTrackerApp: {
+      codeUrl: "https://github.com/devopriyanshu/pricetracker",
+      liveUrl: "https://pricetracker-ochre.vercel.app/",
+    },
+    wellnessApp: {
+      codeUrl: "https://github.com/devopriyanshu/WellNest",
+    },
+    weatherApp: {
+      codeUrl: "https://github.com/devopriyanshu/cozy",
+      liveUrl: "https://cozywthr.netlify.app/",
+    },
     hiregenzo: {
-      frontendUrl: "https://github.com/anjali-1607/HireGenZ_frontend",
+      codeUrl: "https://github.com/anjali-1607/HireGenZ_frontend",
       backendUrl: "https://github.com/anjali-1607/HireGenZ_backend",
     },
     shoes: {
@@ -105,6 +133,17 @@ const Projects = () => {
               {project.title}
             </h3>
             <p className="text-lg text-gray-400 mb-4">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tech?.map((tool, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 text-sm rounded-full bg-[#2b2b2b] text-gray-200 border border-gray-600"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+
             {project.modalKey ? (
               <button
                 onClick={() => handleProjectClick(project.modalKey)}
@@ -131,8 +170,8 @@ const Projects = () => {
         <ProjectModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          frontendUrl={modalData[modalProject]?.frontendUrl}
-          backendUrl={modalData[modalProject]?.backendUrl}
+          codeUrl={modalData[modalProject]?.codeUrl}
+          liveUrl={modalData[modalProject]?.liveUrl}
         />
       )}
     </motion.section>

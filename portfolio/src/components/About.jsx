@@ -47,7 +47,7 @@ const About = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 mt-3">
             About Me
           </h2>
-          <p className="text-base sm:text-2xl leading-relaxed mt-4 text-light">
+          <p className="text-sm sm:text-xl leading-relaxed mt-4 text-light">
             <span className="block md:hidden">
               Passionate full stack developer focused on building high-quality,
               responsive web platforms with clean UIs and reliable APIs.
