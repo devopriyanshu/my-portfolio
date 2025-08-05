@@ -29,9 +29,9 @@ const Projects = () => {
       tech: ["React.js", "JavaScript", "PostgreSQL", "Node.js", "OAuth"],
     },
     {
-      title: "Time Tracker App",
+      title: "Project Time Tracker App",
       description:
-        "A full-stack time tracking web application . It allows users to track their time with manual entries or live timers, and providing admins with detailed time log summaries and project/user management.",
+        "A full-stack project time tracking web application . It allows users to track their time with manual entries or live timers, and providing admins with detailed time log summaries and project/user management.",
       image: timetrackerImg,
       modalKey: "timeTrackerApp",
       tech: [
