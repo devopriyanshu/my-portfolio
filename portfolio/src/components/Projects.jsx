@@ -8,6 +8,7 @@ import wellnestImg from "../assets/images/wellnest.png";
 import pricetrackerImg from "../assets/images/pricetrackerImg.png";
 import cozyImg from "../assets/images/cozy.png";
 import proxyImg from "../assets/images/proxy.png";
+import timetrackerImg from "../assets/images/time-tracker.png";
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,7 +26,21 @@ const Projects = () => {
         "Production-grade wellness platform enabling expert consultations, health center discovery, and user health logging.",
       image: wellnestImg,
       modalKey: "wellnessApp",
-      tech: ["Next.js", "TypeScript", "PostgreSQL", "Node.js", "OAuth"],
+      tech: ["React.js", "JavaScript", "PostgreSQL", "Node.js", "OAuth"],
+    },
+    {
+      title: "Time Tracker App",
+      description:
+        "A full-stack time tracking web application . It allows users to track their time with manual entries or live timers, and providing admins with detailed time log summaries and project/user management.",
+      image: timetrackerImg,
+      modalKey: "timeTrackerApp",
+      tech: [
+        "Next.js",
+        "NextAuth.js",
+        "Prisma ORM",
+        "PostgreSQL",
+        "Tailwind CSS",
+      ],
     },
 
     {
@@ -36,6 +51,7 @@ const Projects = () => {
       modalKey: "weatherApp",
       tech: ["React.js", "React Query", "Tailwind", "Weather API"],
     },
+
     {
       title: "Amazon Price Tracker",
       description:
@@ -63,6 +79,10 @@ const Projects = () => {
   ];
 
   const modalData = {
+    timeTrackerApp: {
+      codeUrl: "https://github.com/devopriyanshu/time-tracker",
+      liveUrl: "https://time-tracker-rho-sandy.vercel.app/",
+    },
     priceTrackerApp: {
       codeUrl: "https://github.com/devopriyanshu/pricetracker",
       liveUrl: "https://pricetracker-ochre.vercel.app/",
