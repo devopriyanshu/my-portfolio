@@ -9,6 +9,7 @@ import pricetrackerImg from "../assets/images/pricetrackerImg.png";
 import cozyImg from "../assets/images/cozy.png";
 import proxyImg from "../assets/images/proxy.png";
 import timetrackerImg from "../assets/images/time-tracker.png";
+import productMatcherImg from "../assets/images/productMatcherImg.jpg";
 
 const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -40,6 +41,21 @@ const Projects = () => {
         "Prisma ORM",
         "PostgreSQL",
         "Tailwind CSS",
+      ],
+    },
+    {
+      title: "Visual Product Matcher",
+      description:
+        "An AI-powered visual search engine that finds semantically similar products using GPT-4o Vision and OpenAI embeddings. Built with Next.js, it transforms images into vector embeddings and compares them using cosine similarity for meaning-based product matching.",
+      image: productMatcherImg,
+      modalKey: "productMatcher",
+      tech: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "OpenAI API",
+        "GPT-4o-mini",
+        "text-embedding-3-large",
       ],
     },
 
@@ -79,6 +95,11 @@ const Projects = () => {
   ];
 
   const modalData = {
+    productMatcher: {
+      codeUrl:
+        "https://github.com/devopriyanshu/visual-product-matcher/tree/main/visual-product-matcher",
+      liveUrl: "https://visual-product-matcher-henna.vercel.app/",
+    },
     timeTrackerApp: {
       codeUrl: "https://github.com/devopriyanshu/time-tracker",
       liveUrl: "https://time-tracker-rho-sandy.vercel.app/",
@@ -89,6 +110,7 @@ const Projects = () => {
     },
     wellnessApp: {
       codeUrl: "https://github.com/devopriyanshu/WellNest",
+      liveUrl: "https://www.mywellnest.app/",
     },
     weatherApp: {
       codeUrl: "https://github.com/devopriyanshu/cozy",
